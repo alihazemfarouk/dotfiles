@@ -1,0 +1,33 @@
+import:
+  - ~/.config/alacritty/themes/themes/gruvbox_material_medium_dark.yaml
+env:
+  TERM: xterm-256color
+window:
+  decorations: "Buttonless"
+  dynamic_padding: true
+  startup_mode: Maximized
+  option_as_alt: Both
+scrolling:
+  history: 2000
+  multiplier: 3
+font:
+  normal:
+    family: jetbrainsmono nerd font
+    style: Regular
+  bold:
+    family: jetbrainsmono nerd font
+    style: Bold
+  italic:
+    family: jetbrainsmono nerd font
+    style: Italic
+  bold_italic:
+    family: jetbrainsmono nerd font
+    style: Bold Italic
+  size: 12
+  glyph_offset:
+    x: -1
+    y: -1
+selection:
+  save_to_clipboard: true
+key_bindings:
+  - { key: M, mods: Control, chars: "\x00\x54" }

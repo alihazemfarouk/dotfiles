@@ -1,0 +1,33 @@
+local options = {
+  autotag = { enable = true },
+  ensure_installed = {
+    "python",
+    "html",
+    "css",
+    "bash",
+    "dockerfile",
+    "git_config",
+    "git_rebase",
+    "gitattributes",
+    "gitignore",
+    "gitcommit",
+    "go",
+    "gomod",
+    "gosum",
+    "gowork",
+    "graphql",
+    "hcl",
+    "javascript",
+    "prisma",
+    "yaml",
+    "json",
+    "jsonc",
+    "vue",
+    "typescript",
+    "terraform",
+    "sql",
+    "markdown",
+  },
+}
+
+return options
