@@ -8,7 +8,7 @@ local options = {
     "docker-compose-language-service",
     "html-lsp",
     "css-lsp",
-    "emmet-ls",
+    "emmet-language-server",
     "cssmodules-language-server",
     "bash-language-server",
     "gopls",

@@ -24,6 +24,7 @@ local servers = {
   "jsonls",
   "gopls",
   "prismals",
+  "emmet_language_server",
 }
 
 for _, lsp in ipairs(servers) do
@@ -40,8 +41,11 @@ require("typescript-tools").setup {
       7044,
     },
   },
-  tsserver_plugins = {
-    "@styled/typescript-styled-plugin",
+  settings = {
+    expose_as_code_action = "all",
+    tsserver_plugins = {
+      "@styled/typescript-styled-plugin",
+    },
   },
 }
 
@@ -58,29 +62,6 @@ lspconfig.pyright.setup {
         diagnosticSeverityOverrides = {
           reportPrivateImportUsage = "none",
         },
-      },
-    },
-  },
-}
-
-lspconfig.emmet_ls.setup {
-  capabilities = capabilities,
-  filetypes = {
-    "css",
-    "html",
-    "javascript",
-    "javascriptreact",
-    "less",
-    "sass",
-    "scss",
-    "svelte",
-    "typescriptreact",
-    "vue",
-  },
-  init_options = {
-    html = {
-      options = {
-        ["bem.enabled"] = true,
       },
     },
   },
