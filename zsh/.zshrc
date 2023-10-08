@@ -92,7 +92,6 @@ source $ZSH/oh-my-zsh.sh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#555555'
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-bindkey '\t' autosuggest-accept
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
