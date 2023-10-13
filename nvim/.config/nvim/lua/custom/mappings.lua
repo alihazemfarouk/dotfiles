@@ -52,8 +52,8 @@ M.lazygit = {
 M.vimfugitive = {
   n = {
     ["<leader>gd"] = { "<cmd> Gvdiffsplit! <CR>", "Shows git diff in vertical split mode" },
-    ["<leader>gdh"] = { "<cmd> diffget //2 <CR>", "Choose diff on the left" },
-    ["<leader>gdl"] = { "<cmd> diffget //3 <CR>", "Choose diff on the right" },
+    ["<leader>grh"] = { "<cmd> diffget //2 <CR>", "Choose diff on the left" },
+    ["<leader>grl"] = { "<cmd> diffget //3 <CR>", "Choose diff on the right" },
     ["<leader>gB"] = { "<cmd> GBrowse <CR>", "Browse current file on git hosting provider" },
   },
   x = {
