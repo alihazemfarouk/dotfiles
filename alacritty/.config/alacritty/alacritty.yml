@@ -23,7 +23,7 @@ font:
   bold_italic:
     family: jetbrainsmono nerd font
     style: Bold Italic
-  size: 11.9
+  size: 11
 selection:
   save_to_clipboard: true
 key_bindings:
