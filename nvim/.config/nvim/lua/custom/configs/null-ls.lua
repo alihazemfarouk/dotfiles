@@ -14,7 +14,7 @@ local sources = {
   formatting.prettierd,
   formatting.eslint_d,
   formatting.stylua,
-  formatting.blackd,
+  formatting.ruff_format,
   formatting.reorder_python_imports,
   formatting.stylua,
   formatting.gofumpt,
@@ -23,7 +23,7 @@ local sources = {
   },
 
   lint.shellcheck,
-  lint.flake8,
+  lint.ruff,
   lint.eslint_d,
 }
 

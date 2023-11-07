@@ -61,6 +61,7 @@ lspconfig.pyright.setup {
         typeCheckingMode = "basic",
         diagnosticSeverityOverrides = {
           reportPrivateImportUsage = "none",
+          reportOptionalMemberAccess = "none",
         },
       },
     },
