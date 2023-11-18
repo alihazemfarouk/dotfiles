@@ -95,7 +95,7 @@ local plugins = {
     "utilyre/barbecue.nvim",
     name = "barbecue",
     version = "*",
-    event = "BufReadPre",
+    event = "BufRead",
     dependencies = {
       "SmiteshP/nvim-navic",
       "nvim-tree/nvim-web-devicons",
@@ -121,7 +121,7 @@ local plugins = {
   },
   {
     "github/copilot.vim",
-    event = "BufReadPre",
+    event = "BufRead",
     config = function()
       require "custom.configs.copilot"
     end,
@@ -231,6 +231,16 @@ local plugins = {
     dependencies = {
       "kristijanhusak/vim-dadbod-ui",
       "kristijanhusak/vim-dadbod-completion",
+    },
+  },
+  {
+    "nomnivore/ollama.nvim",
+    event = "BufRead",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    opts = {
+      model = "codellama",
     },
   },
 }

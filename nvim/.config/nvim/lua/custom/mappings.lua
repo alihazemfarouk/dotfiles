@@ -136,5 +136,13 @@ M.vimtest = {
     ["<leader>td"] = { ":TogglePytestDebugging<CR>", "Enable pytest debugging" },
   },
 }
+M.ollama = {
+  n = {
+    ["<leader>oo"] = { ":<c-u>lua require('ollama').prompt()<cr>", "Ollama prompt" },
+  },
+  v = {
+    ["<leader>oo"] = { ":<c-u>lua require('ollama').prompt()<cr>", "Ollama prompt" },
+  },
+}
 
 return M
