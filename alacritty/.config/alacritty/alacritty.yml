@@ -12,13 +12,13 @@ scrolling:
   multiplier: 3
 font:
   normal:
-    family: jetbrainsmono nerd font
+    family: JetBrainsMono NFP
   bold:
-    family: jetbrainsmono nerd font
+    family: JetBrainsMono NFP
   italic:
-    family: jetbrainsmono nerd font
+    family: JetBrainsMono NFP
   bold_italic:
-    family: jetbrainsmono nerd font
+    family: JetBrainsMono NFP
   size: 12
 selection:
   save_to_clipboard: true
