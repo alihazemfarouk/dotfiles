@@ -18,6 +18,7 @@ local options = {
     "eslint_d",
     "tflint",
     "prisma-language-server",
+    "ruff",
   },
 }
 

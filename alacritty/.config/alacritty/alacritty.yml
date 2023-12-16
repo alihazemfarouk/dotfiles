@@ -19,7 +19,7 @@ font:
     family: JetBrainsMono NFP
   bold_italic:
     family: JetBrainsMono NFP
-  size: 12
+  size: 12.2
 selection:
   save_to_clipboard: true
 key_bindings:
