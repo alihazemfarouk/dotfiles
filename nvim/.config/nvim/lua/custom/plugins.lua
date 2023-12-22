@@ -172,6 +172,10 @@ local plugins = {
     event = "VeryLazy",
   },
   {
+    "ThePrimeagen/harpoon",
+    event = "BufRead",
+  },
+  {
     "ThePrimeagen/refactoring.nvim",
     event = "BufRead",
     dependencies = {
