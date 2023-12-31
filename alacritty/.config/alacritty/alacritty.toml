@@ -1,0 +1,37 @@
+import = ["/Users/alifarouk/.config/alacritty/themes/themes/catppuccin.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 12
+
+[font.bold]
+family = "JetBrainsMono NFP"
+
+[font.bold_italic]
+family = "JetBrainsMono NFP"
+
+[font.italic]
+family = "JetBrainsMono NFP"
+
+[font.normal]
+family = "JetBrainsMono NFP"
+
+[[keyboard.bindings]]
+chars = "\u0000T"
+key = "M"
+mods = "Control"
+
+[scrolling]
+history = 2000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+
+[window]
+decorations = "Buttonless"
+dynamic_padding = true
+option_as_alt = "Both"
+startup_mode = "Maximized"
