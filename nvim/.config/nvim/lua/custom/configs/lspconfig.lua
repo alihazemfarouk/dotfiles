@@ -7,9 +7,9 @@ local on_attach = function(client, bufnr)
   if client.server_capabilities["documentSymbolProvider"] then
     require("nvim-navic").attach(client, bufnr)
   end
-  vim.diagnostic.config {
-    virtual_text = false,
-  }
+  -- vim.diagnostic.config {
+  --   virtual_text = false,
+  -- }
 end
 
 local lspconfig = require "lspconfig"
