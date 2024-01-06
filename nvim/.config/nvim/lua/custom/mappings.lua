@@ -42,16 +42,6 @@ M.nvimtree = {
     ["<C-p>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
   },
 }
-M.harpoon = {
-  n = {
-    ["<leader>fp"] = { "<cmd> lua require('harpoon.ui').toggle_quick_menu() <CR>", "Telescope Harpoon marks" },
-    ["<S-h>a"] = { "<cmd> lua require('harpoon.mark').add_file() <CR>", "Add Harpoon mark" },
-    ["<leader>1"] = { "<cmd> lua require('harpoon.ui').nav_file(1) <CR>", "Nav to Harpoon file 1" },
-    ["<leader>2"] = { "<cmd> lua require('harpoon.ui').nav_file(2) <CR>", "Nav to Harpoon file 2" },
-    ["<leader>3"] = { "<cmd> lua require('harpoon.ui').nav_file(3) <CR>", "Nav to Harpoon file 3" },
-    ["<leader>4"] = { "<cmd> lua require('harpoon.ui').nav_file(4) <CR>", "Nav to Harpoon file 4" },
-  },
-}
 M.lazygit = {
   n = {
     ["<leader>lg"] = { "<cmd> LazyGit <CR>", "Starts LazyGit" },
