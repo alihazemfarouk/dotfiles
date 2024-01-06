@@ -9,6 +9,14 @@ M.general = {
       "LSP code action",
     },
   },
+  x = {
+    ["m"] = { "d", "Move, i.e. delete and copy to clipboard" },
+  },
+  n = {
+    ["m"] = { "d", "Move, i.e. delete and copy to clipboard" },
+    ["mm"] = { "dd", "Move line, i.e. delete and copy to clipboard" },
+    ["M"] = { "D", "Move remainder of line, i.e. delete and copy to clipboard" },
+  },
 }
 
 -- plugins specific mappings

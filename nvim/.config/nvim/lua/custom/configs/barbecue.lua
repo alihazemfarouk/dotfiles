@@ -1,7 +1,11 @@
+local barbecue_ui = require "barbecue.ui"
+
 require("barbecue").setup {
   create_autocmd = false,
   attach_navic = false,
 }
+
+barbecue_ui.update()
 
 vim.api.nvim_create_autocmd({
   "WinScrolled",
@@ -12,6 +16,6 @@ vim.api.nvim_create_autocmd({
 }, {
   group = vim.api.nvim_create_augroup("barbecue.updater", {}),
   callback = function()
-    require("barbecue.ui").update()
+    barbecue_ui.update()
   end,
 })

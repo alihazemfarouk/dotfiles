@@ -215,7 +215,7 @@ local plugins = {
       { "mxsdev/nvim-dap-vscode-js", module = { "dap-vscode-js" } },
       {
         "microsoft/vscode-js-debug",
-        build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && rm -rf out && mv dist out",
+        build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && rm -rf out && mv dist out && git restore package-lock.json &",
       },
       { "mfussenegger/nvim-dap-python" },
     },
@@ -245,6 +245,33 @@ local plugins = {
     },
     opts = {
       model = "codellama",
+    },
+  },
+  {
+    "svermeulen/vim-cutlass",
+    event = "BufRead",
+  },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      lsp = {
+        override = {
+          ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+          ["vim.lsp.util.stylize_markdown"] = true,
+          ["cmp.entry.get_documentation"] = true,
+        },
+        hover = {
+          enabled = false,
+        },
+        signature = {
+          enabled = false,
+        },
+      },
+    },
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
     },
   },
 }

@@ -4,6 +4,10 @@ local options = {
     "nvim-treesitter/nvim-treesitter-textobjects",
   },
   ensure_installed = {
+    "lua",
+    "vimdoc",
+    "regex",
+    "markdown_inline",
     "python",
     "html",
     "css",
