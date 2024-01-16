@@ -11,7 +11,7 @@ local sources = {
   code_actions.shellcheck,
   code_actions.refactoring,
 
-  formatting.prettierd,
+  formatting.prettier,
   formatting.eslint_d,
   formatting.stylua,
   formatting.ruff_format,
