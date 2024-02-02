@@ -13,7 +13,6 @@ local plugins = {
       local builtin_config = require("plugins.configs.others").gitsigns
       local custom_config = require "custom.configs.gitsigns"
       local merged_config = vim.tbl_deep_extend("force", builtin_config, custom_config)
-      print(vim.inspect(merged_config))
       return merged_config
     end,
   },
