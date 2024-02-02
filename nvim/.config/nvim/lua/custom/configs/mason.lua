@@ -15,10 +15,12 @@ local options = {
     "json-lsp",
     "vue-language-server",
     "prettier",
+    "prettierd",
     "eslint_d",
     "tflint",
     "prisma-language-server",
     "ruff",
+    "sqlfmt",
   },
 }
 

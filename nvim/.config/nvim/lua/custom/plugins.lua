@@ -4,6 +4,20 @@ local plugins = {
     enabled = false,
   },
   {
+    "folke/which-key.nvim",
+    enabled = false,
+  },
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = function()
+      local builtin_config = require("plugins.configs.others").gitsigns
+      local custom_config = require "custom.configs.gitsigns"
+      local merged_config = vim.tbl_deep_extend("force", builtin_config, custom_config)
+      print(vim.inspect(merged_config))
+      return merged_config
+    end,
+  },
+  {
     "williamboman/mason.nvim",
     opts = require "custom.configs.mason",
   },
@@ -156,20 +170,12 @@ local plugins = {
     },
   },
   {
-    "mg979/vim-visual-multi",
-    event = "BufRead",
-  },
-  {
     "matze/vim-move",
     event = "BufRead",
   },
   {
     "dyng/ctrlsf.vim",
     event = "BufRead",
-  },
-  {
-    "nvim-zh/better-escape.vim",
-    event = "VeryLazy",
   },
   {
     "ThePrimeagen/harpoon",
@@ -239,16 +245,6 @@ local plugins = {
     dependencies = {
       "kristijanhusak/vim-dadbod-ui",
       "kristijanhusak/vim-dadbod-completion",
-    },
-  },
-  {
-    "nomnivore/ollama.nvim",
-    event = "BufRead",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    opts = {
-      model = "codellama",
     },
   },
   {

@@ -1,4 +1,4 @@
-import = ["/Users/alifarouk/.config/alacritty/themes/themes/catppuccin.toml"]
+import = ["/Users/alifarouk/.config/alacritty/themes/themes/onedark.toml"]
 
 [env]
 TERM = "xterm-256color"

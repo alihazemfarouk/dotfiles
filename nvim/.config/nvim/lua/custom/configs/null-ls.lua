@@ -11,7 +11,7 @@ local sources = {
   code_actions.shellcheck,
   code_actions.refactoring,
 
-  formatting.prettier,
+  formatting.prettierd,
   formatting.eslint_d,
   formatting.stylua,
   formatting.ruff_format,
@@ -21,6 +21,7 @@ local sources = {
   formatting.terraform_fmt.with {
     filetypes = { "terraform", "tf", "terraform-vars", "hcl" },
   },
+  formatting.sqlfmt,
 
   lint.shellcheck,
   lint.ruff,

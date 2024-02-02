@@ -2,7 +2,7 @@
 local M = {}
 
 M.ui = {
-  theme = "catppuccin",
+  theme = "onedark",
   hl_add = {
     DiagnosticUnderlineError = { undercurl = true, fg = "red" },
     DiagnosticUnderlineWarn = { undercurl = true, fg = "yellow" },

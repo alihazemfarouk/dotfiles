@@ -89,16 +89,7 @@ M.theprimeagen = {
   n = {
     ["<C-d>"] = { "<C-d>zz", "Go down and center screen" },
     ["<C-u>"] = { "<C-u>zz", "Go up and center screen" },
-    ["x"] = { '"_x', "Delete without copying to clipboad" },
-    ["X"] = { '"_X', "Delete without copying to clipboad" },
-    ["<leader>dd"] = { '"_dd', "Delete without copying to clipboad" },
     ["<leader>s"] = { [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Replace word under cursor" },
-  },
-  x = {
-    ["<leader>p"] = { '"_dP', "Paste over" },
-  },
-  v = {
-    ["<leader>dd"] = { '"_d', "Delete over" },
   },
 }
 M.undotree = {
