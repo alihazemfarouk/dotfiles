@@ -44,6 +44,16 @@ local plugins = {
     opts = {},
   },
   {
+    "stevanmilic/nvim-lspimport",
+  },
+  {
+    "Wansmer/symbol-usage.nvim",
+    event = "BufReadPre", -- needs to run before LspAttach if you use nvim 0.9. On 0.10 use 'LspAttach'
+    config = function()
+      require("symbol-usage").setup()
+    end,
+  },
+  {
     "nvim-treesitter/nvim-treesitter",
     opts = require "custom.configs.nvim-treesitter",
     dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
@@ -249,6 +259,33 @@ local plugins = {
   {
     "svermeulen/vim-cutlass",
     event = "BufRead",
+  },
+  {
+    "toppair/peek.nvim",
+    event = { "VeryLazy" },
+    build = "deno task --quiet build:fast",
+    config = function()
+      require("peek").setup()
+      vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+      vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+    end,
+  },
+  {
+    "ellisonleao/dotenv.nvim",
+    lazy = false,
+    opts = {
+      enable_on_load = false,
+    },
+  },
+  {
+    "roobert/f-string-toggle.nvim",
+    event = "BufRead",
+    config = function()
+      require("f-string-toggle").setup {
+        key_binding = "<leader>fs",
+        key_binding_desc = "Toggle f-string",
+      }
+    end,
   },
 }
 

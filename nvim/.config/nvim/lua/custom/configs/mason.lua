@@ -21,6 +21,7 @@ local options = {
     "prisma-language-server",
     "ruff",
     "sqlfmt",
+    "deno",
   },
 }
 

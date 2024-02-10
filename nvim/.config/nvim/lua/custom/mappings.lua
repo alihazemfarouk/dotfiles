@@ -143,4 +143,9 @@ M.harpoon = {
     ["<leader>4"] = { "<cmd> lua require('harpoon.ui').nav_file(4) <CR>", "Nav to Harpoon file 4" },
   },
 }
+M.nvim_lspimport = {
+  n = {
+    ["<leader>ai"] = { "<cmd> lua require('lspimport').import() <CR>", "LSP import" },
+  },
+}
 return M
