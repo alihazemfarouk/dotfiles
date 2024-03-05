@@ -34,6 +34,11 @@ local options = {
     "terraform",
     "sql",
     "markdown",
+    "csv",
+    "htmldjango",
+    "requirements",
+    "toml",
+    "xml",
   },
   textobjects = {
     select = {

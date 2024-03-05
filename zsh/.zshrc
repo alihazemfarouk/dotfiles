@@ -117,6 +117,9 @@ function dkrcdown() {
 function dkrcupd() {
   docker compose -f docker-compose.yml -f ~/.docker-compose-debugg-override.yml up -d 
 }
+function t() {
+  sesh connect $(sesh list | fzf)
+}
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -162,8 +165,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# t - the smart tmux session manager
-export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
 eval "$(zoxide init zsh)"
 
 # set k9s editor to vim

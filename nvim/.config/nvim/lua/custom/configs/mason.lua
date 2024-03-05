@@ -12,6 +12,7 @@ local options = {
     "cssmodules-language-server",
     "bash-language-server",
     "gopls",
+    "goimports",
     "json-lsp",
     "vue-language-server",
     "prettier",
@@ -21,7 +22,9 @@ local options = {
     "prisma-language-server",
     "ruff",
     "sqlfmt",
-    "deno",
+    "sqlfluff",
+    "vale",
+    "shellcheck",
   },
 }
 

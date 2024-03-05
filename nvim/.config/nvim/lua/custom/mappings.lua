@@ -6,7 +6,7 @@ M.general = {
       function()
         vim.lsp.buf.code_action()
       end,
-      "LSP code action",
+      "LSP Code Actions",
     },
   },
   x = {
@@ -23,6 +23,15 @@ M.general = {
 M.disabled = {
   n = {
     ["<C-n>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" }, -- replaced by <C-p>
+    ["<leader>ca"] = { "", "LSP Code Actions" },
+    ["<leader>ra"] = { "", "LSP Rename" },
+    ["K"] = { "", "LSP Hover" },
+    ["gd"] = {
+      function()
+        vim.lsp.buf.definition()
+      end,
+      "LSP definition",
+    }, -- replaced by Telescope
     ["gr"] = {
       function()
         vim.lsp.buf.references()
@@ -64,11 +73,23 @@ M.telescope = {
     ["<leader>gt"] = { "<cmd> Telescope lsp_type_definitions <CR>", "LSP Type Definitions" },
     ["gr"] = { "<cmd> Telescope lsp_references <CR>", "LSP References" },
     ["gi"] = { "<cmd> Telescope lsp_implementations <CR>", "LSP Implementations" },
-    ["<leader>ic"] = { "<cmd> Telescope lsp_incoming_calls <CR>", "LSP Incoming Calls" },
-    ["<leader>oc"] = { "<cmd> Telescope lsp_outgoing_calls <CR>", "LSP Outgoing Calls" },
     ["<leader>sm"] = { "<cmd> Telescope lsp_document_symbols <CR>", "LSP Document Symbols" },
     ["<leader>ws"] = { "<cmd> Telescope lsp_workspace_symbols <CR>", "LSP Workspace Symbols" },
     ["<leader>di"] = { "<cmd> Telescope diagnostics <CR>", "LSP Diagnostics" },
+  },
+}
+M.lspsaga = {
+  n = {
+    ["<leader>ic"] = { "<cmd> Lspsaga incoming_calls <CR>", "LSP Incoming Calls" },
+    ["<leader>oc"] = { "<cmd> Lspsaga outgoing_calls <CR>", "LSP Outgoing Calls" },
+    ["<leader>ca"] = { "<cmd> Lspsaga code_action <CR>", "LSP Code Action" },
+    ["<leader>rn"] = { "<cmd> Lspsaga rename <CR>", "LSP Rename" },
+    ["<leader>pd"] = { "<cmd> Lspsaga peek_definition <CR>", "LSP Preview Definition" },
+    ["<leader>ds"] = { "<cmd> Lspsaga show_line_diagnostics <CR>", "LSP Show Line Diagnostics" },
+    ["<leader>cc"] = { "<cmd> Lspsaga show_cursor_diagnostics <CR>", "LSP Show Cursor Diagnostics" },
+    ["<leader>ol"] = { "<cmd> Lspsaga outline <CR>", "LSP Symbols Ouline" },
+    ["K"] = { "<cmd> Lspsaga hover_doc <CR>", "LSP Hover" },
+    ["gd"] = { "<cmd> Lspsaga goto_definition <CR>", "LSP Goto Definition" },
   },
 }
 M.tmux = {

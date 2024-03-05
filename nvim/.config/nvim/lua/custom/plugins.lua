@@ -24,19 +24,43 @@ local plugins = {
     "neovim/nvim-lspconfig",
     dependencies = {
       {
-        "nvimtools/none-ls.nvim",
+        "mfussenegger/nvim-lint",
         config = function()
-          require "custom.configs.null-ls"
+          require "custom.configs.nvim-lint"
+        end,
+      },
+      {
+        "stevearc/conform.nvim",
+        config = function()
+          require "custom.configs.conform"
         end,
       },
       {
         "windwp/nvim-ts-autotag",
+      },
+      {
+        "nvimdev/lspsaga.nvim",
+        config = function()
+          require("lspsaga").setup {
+            code_action = {
+              extend_gitsigns = true,
+            },
+          }
+        end,
+        dependencies = {
+          "nvim-treesitter/nvim-treesitter",
+          "nvim-tree/nvim-web-devicons",
+        },
       },
     },
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
     end,
+  },
+  {
+    "towolf/vim-helm",
+    event = "BufReadPre",
   },
   {
     "pmizio/typescript-tools.nvim",
@@ -47,10 +71,23 @@ local plugins = {
     "stevanmilic/nvim-lspimport",
   },
   {
-    "Wansmer/symbol-usage.nvim",
-    event = "BufReadPre", -- needs to run before LspAttach if you use nvim 0.9. On 0.10 use 'LspAttach'
+    "VidocqH/lsp-lens.nvim",
+    event = "BufReadPre",
     config = function()
-      require("symbol-usage").setup()
+      require("lsp-lens").setup {
+        sections = {
+          definition = false,
+          references = true,
+          implements = false,
+          git_authors = true,
+        },
+        target_symbol_kinds = {
+          vim.lsp.protocol.SymbolKind.Function,
+          vim.lsp.protocol.SymbolKind.Method,
+          vim.lsp.protocol.SymbolKind.Interface,
+          vim.lsp.protocol.SymbolKind.Class,
+        },
+      }
     end,
   },
   {
@@ -112,19 +149,6 @@ local plugins = {
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
-  },
-  {
-    "utilyre/barbecue.nvim",
-    name = "barbecue",
-    version = "*",
-    event = "BufRead",
-    dependencies = {
-      "SmiteshP/nvim-navic",
-      "nvim-tree/nvim-web-devicons",
-    },
-    config = function()
-      require "custom.configs.barbecue"
-    end,
   },
   {
     "christoomey/vim-tmux-navigator",
@@ -229,11 +253,10 @@ local plugins = {
     dependencies = {
       { "rcarriga/nvim-dap-ui" },
       { "theHamsta/nvim-dap-virtual-text" },
-      { "mxsdev/nvim-dap-vscode-js",      module = { "dap-vscode-js" } },
+      { "mxsdev/nvim-dap-vscode-js", module = { "dap-vscode-js" } },
       {
         "microsoft/vscode-js-debug",
-        build =
-        "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && rm -rf out && mv dist out && git restore package-lock.json",
+        build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && rm -rf out && mv dist out && git restore package-lock.json",
       },
       { "mfussenegger/nvim-dap-python" },
     },
