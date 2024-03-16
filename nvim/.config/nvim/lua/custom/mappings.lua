@@ -169,4 +169,9 @@ M.nvim_lspimport = {
     ["<leader>ai"] = { "<cmd> lua require('lspimport').import() <CR>", "LSP import" },
   },
 }
+M.neogi = {
+  n = {
+    ["<leader>g"] = { "<cmd> Neogit <CR>", "Neogit" },
+  },
+}
 return M
