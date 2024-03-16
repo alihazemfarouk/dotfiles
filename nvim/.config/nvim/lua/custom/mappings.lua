@@ -171,7 +171,7 @@ M.nvim_lspimport = {
 }
 M.neogi = {
   n = {
-    ["<leader>g"] = { "<cmd> Neogit <CR>", "Neogit" },
+    ["<leader>ng"] = { "<cmd> Neogit <CR>", "Neogit" },
   },
 }
 return M

@@ -45,6 +45,9 @@ local plugins = {
             code_action = {
               extend_gitsigns = true,
             },
+            lightbulb = {
+              enable = false,
+            },
           }
         end,
         dependencies = {

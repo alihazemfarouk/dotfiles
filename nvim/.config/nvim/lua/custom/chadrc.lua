@@ -3,6 +3,7 @@ local M = {}
 
 M.ui = {
   theme = "onedark",
+  lsp_semantic_tokens = true,
   hl_add = {
     DiagnosticUnderlineError = { undercurl = true, fg = "red" },
     DiagnosticUnderlineWarn = { undercurl = true, fg = "yellow" },

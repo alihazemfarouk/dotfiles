@@ -32,7 +32,10 @@ for _, lsp in ipairs(servers) do
 end
 
 require("typescript-tools").setup {
-  on_attach = on_attach,
+  on_attach = function(client, bufnr)
+    client.server_capabilities.semanticTokensProvider = nil
+    on_attach(client, bufnr)
+  end,
   handlers = {
     ["textDocument/publishDiagnostics"] = require("typescript-tools.api").filter_diagnostics {
       7044,
