@@ -114,8 +114,14 @@ local plugins = {
     end,
   },
   {
-    "tpope/vim-fugitive",
-    event = "VeryLazy",
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "sindrets/diffview.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
+    lazy = false,
+    config = true,
   },
   {
     "junegunn/gv.vim",

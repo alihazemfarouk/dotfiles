@@ -12,7 +12,7 @@ function TogglePytestDebugging()
     print "Disabled pytest debugging"
   else
     vim.g["test#python#pytest#executable"] =
-      "docker compose -f docker-compose.yml -f ~/.debugpyvenv/debugpy/docker-compose.override.yml exec -u root api python -m debugpy --wait-for-client --listen 0.0.0.0:5678 -m pytest"
+      "docker compose -f docker-compose.yml -f ~/.dotfiles/.docker-compose-debug-override.yml exec -u root api python -m debugpy --wait-for-client --listen 0.0.0.0:5678 -m pytest"
     test_debugging_enabled = true
     print "Enabled pytest debugging"
   end

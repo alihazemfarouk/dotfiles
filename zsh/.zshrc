@@ -115,7 +115,7 @@ function dkrcdown() {
   docker rm $(docker ps -a -q)
 }
 function dkrcupd() {
-  docker compose -f docker-compose.yml -f ~/.docker-compose-debugg-override.yml up -d 
+  docker compose -f docker-compose.yml -f ~/.dotfiles/.docker-compose-debug-override.yml up -d 
 }
 function t() {
   sesh connect $(sesh list | fzf)
