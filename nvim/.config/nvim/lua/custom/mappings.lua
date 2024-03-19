@@ -44,6 +44,7 @@ M.disabled = {
       end,
       "LSP implementation",
     }, -- replaced by Telescope
+    ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "Find files" }, -- replaced by similar commands that follows symbolic links and shows hidden files
   },
 }
 M.nvimtree = {
@@ -69,6 +70,10 @@ M.vimfugitive = {
 }
 M.telescope = {
   n = {
+    ["<leader>ff"] = {
+      "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '--follow','-g', '!.git' }})<cr>",
+      "Find files",
+    },
     ["<leader>fg"] = { "<cmd> Telescope git_files <CR>", "Git files" },
     ["<leader>gt"] = { "<cmd> Telescope lsp_type_definitions <CR>", "LSP Type Definitions" },
     ["gr"] = { "<cmd> Telescope lsp_references <CR>", "LSP References" },
