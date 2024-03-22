@@ -4,7 +4,7 @@ import = ["/Users/alifarouk/.config/alacritty/themes/themes/onedark.toml"]
 TERM = "xterm-256color"
 
 [font]
-size = 12.2
+size = 12.45
 
 [font.bold]
 family = "JetBrainsMono NFP"

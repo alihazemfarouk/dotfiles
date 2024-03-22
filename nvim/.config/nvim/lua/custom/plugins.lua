@@ -123,25 +123,13 @@ local plugins = {
       "sindrets/diffview.nvim",
       "nvim-telescope/telescope.nvim",
     },
-    lazy = false,
+    event = "VeryLazy",
     config = true,
   },
   {
     "junegunn/gv.vim",
     event = "VeryLazy",
     dependencies = { "tpope/vim-fugitive" },
-  },
-  {
-    "pwntester/octo.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-      "nvim-tree/nvim-web-devicons",
-    },
-    event = "VeryLazy",
-    config = function()
-      require "custom.configs.octo"
-    end,
   },
   {
     "tpope/vim-rhubarb",
@@ -248,7 +236,7 @@ local plugins = {
   },
   {
     "preservim/vimux",
-    lazy = false,
+    event = "VeryLazy",
   },
   {
     "vim-test/vim-test",
@@ -303,7 +291,7 @@ local plugins = {
   },
   {
     "ellisonleao/dotenv.nvim",
-    lazy = false,
+    event = "VeryLazy",
     opts = {
       enable_on_load = false,
     },
