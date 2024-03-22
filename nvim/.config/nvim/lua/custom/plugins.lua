@@ -31,6 +31,8 @@ local plugins = {
       },
       {
         "stevearc/conform.nvim",
+        event = { "BufWritePre" },
+        cmd = { "ConformInfo" },
         config = function()
           require "custom.configs.conform"
         end,
@@ -72,26 +74,6 @@ local plugins = {
   },
   {
     "stevanmilic/nvim-lspimport",
-  },
-  {
-    "VidocqH/lsp-lens.nvim",
-    event = "BufReadPre",
-    config = function()
-      require("lsp-lens").setup {
-        sections = {
-          definition = false,
-          references = true,
-          implements = false,
-          git_authors = true,
-        },
-        target_symbol_kinds = {
-          vim.lsp.protocol.SymbolKind.Function,
-          vim.lsp.protocol.SymbolKind.Method,
-          vim.lsp.protocol.SymbolKind.Interface,
-          vim.lsp.protocol.SymbolKind.Class,
-        },
-      }
-    end,
   },
   {
     "nvim-treesitter/nvim-treesitter",

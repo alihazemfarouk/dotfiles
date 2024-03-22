@@ -12,11 +12,9 @@ require("conform").setup {
     tf = { "terraform_fmt" },
     sql = { "sqlfmt" },
   },
+  notify_on_error = false,
   format_on_save = {
     timeout_ms = 500,
-    lsp_fallback = true,
-  },
-  format_after_save = {
     lsp_fallback = true,
   },
 }
