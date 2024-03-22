@@ -13,6 +13,8 @@ opt.shiftwidth = 2
 opt.expandtab = true
 opt.smartindent = true
 
+opt.guicursor = "a-n-v-c-i:block-blinkon5-blinkoff5"
+
 opt.swapfile = false
 opt.backup = false
 opt.undodir = os.getenv "HOME" .. "/.vim/undodir"
