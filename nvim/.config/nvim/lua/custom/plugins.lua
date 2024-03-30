@@ -92,13 +92,6 @@ local plugins = {
     event = "BufRead",
   },
   {
-    "RRethy/vim-illuminate",
-    event = "BufRead",
-    config = function()
-      require("illuminate").configure()
-    end,
-  },
-  {
     "NeogitOrg/neogit",
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -260,16 +253,6 @@ local plugins = {
   {
     "svermeulen/vim-cutlass",
     event = "BufRead",
-  },
-  {
-    "toppair/peek.nvim",
-    event = { "VeryLazy" },
-    build = "deno task --quiet build:fast",
-    config = function()
-      require("peek").setup()
-      vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
-      vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
-    end,
   },
   {
     "ellisonleao/dotenv.nvim",

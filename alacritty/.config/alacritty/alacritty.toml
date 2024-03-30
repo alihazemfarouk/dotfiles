@@ -18,10 +18,12 @@ family = "JetBrainsMono NFP"
 [font.normal]
 family = "JetBrainsMono NFP"
 
-[[keyboard.bindings]]
-chars = "\u0000T"
-key = "M"
-mods = "Control"
+[keyboard]
+bindings = [
+  { key = "Right", mods = "Alt", chars = "\u001BF" },
+  { key = "Left",  mods = "Alt", chars = "\u001BB" },
+  { key = "M", mods= "Control", chars = "\u0000T"}
+]
 
 [scrolling]
 history = 2000
