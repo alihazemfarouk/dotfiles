@@ -179,4 +179,9 @@ M.neogi = {
     ["<leader>ng"] = { "<cmd> Neogit <CR>", "Neogit" },
   },
 }
+M.glow = {
+  n = {
+    ["<leader>mp"] = { "<cmd> Glow<CR>", "Markdown preview" },
+  },
+}
 return M
