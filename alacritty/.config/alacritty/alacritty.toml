@@ -1,22 +1,25 @@
-import = ["/Users/alifarouk/.config/alacritty/themes/themes/onedark.toml"]
+import = ["/Users/alifarouk/.config/alacritty/themes/themes/catppuccin_mocha.toml"]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 12.45
+size = 12.2
 
 [font.bold]
-family = "JetBrainsMono NFP"
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
 
 [font.bold_italic]
-family = "JetBrainsMono NFP"
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
 
 [font.italic]
-family = "JetBrainsMono NFP"
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
 
 [font.normal]
-family = "JetBrainsMono NFP"
+family = "JetBrainsMono Nerd Font"
 
 [keyboard]
 bindings = [
@@ -37,3 +40,7 @@ decorations = "Buttonless"
 dynamic_padding = true
 option_as_alt = "Both"
 startup_mode = "Maximized"
+
+[shell]
+program = "/bin/zsh"
+args = ["-l", "-c", "source ~/.zshrc; tmux new-session -A -s main"]
