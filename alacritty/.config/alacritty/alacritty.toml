@@ -40,6 +40,8 @@ decorations = "Buttonless"
 dynamic_padding = true
 option_as_alt = "Both"
 startup_mode = "Maximized"
+padding.x = 10
+padding.y = 10
 
 [shell]
 program = "/bin/zsh"

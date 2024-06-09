@@ -6,7 +6,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 # elbaqara elhakeema
 # fortune | cowsay -W 140 | lolcat
-fortune
+fortune | cowsay
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -138,7 +138,8 @@ alias tf="terraform"
 alias tp="telepresence"
 alias vim="nvim"
 alias v="nvim"
-alias lg="lazygit"
+alias lzg="lazygit"
+alias lzd="lazydocker"
 alias cat="bat"
 alias ls="exa"
 
@@ -175,3 +176,6 @@ export EDITOR=nvim
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source ~/.thndrzshshortcuts.sh
+
