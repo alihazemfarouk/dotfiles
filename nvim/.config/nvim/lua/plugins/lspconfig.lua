@@ -165,7 +165,14 @@ return {
         jsonls = {},
         gopls = {},
         emmet_language_server = {},
-        tsserver = {},
+        tsserver = {
+          init_options = {
+            preferences = {
+              disableSuggestions = true,
+            },
+          },
+        },
+        csharp_ls = {},
         pyright = {
           settings = {
             python = {

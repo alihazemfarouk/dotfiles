@@ -31,7 +31,7 @@ return {
     keys = {
       { '<leader>tt', ':TestNearest<CR>', { desc = 'Run nearest test' } },
       { '<leader>tf', ':TestFile<CR>', { desc = 'Run all tests in file' } },
-      { '<leader>ts', ':TestSuite<CR>', { desc = 'Run all tests in suite' } },
+      { '<leader>ta', ':TestSuite<CR>', { desc = 'Run all tests in suite' } },
       { '<leader>tl', ':TestLast<CR>', { desc = 'Run last test' } },
       { '<leader>tv', ':TestVisit<CR>', { desc = 'Run test under cursor' } },
       { '<leader>td', ':TogglePytestDebugging<CR>', { desc = 'Toggle pytest debugging' } },

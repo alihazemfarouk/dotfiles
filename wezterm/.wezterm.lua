@@ -1,9 +1,10 @@
 local wezterm = require("wezterm")
+local mux = wezterm.mux
 
 local config = {
 	bidi_enabled = true,
 	font = wezterm.font("JetBrainsMono Nerd Font"),
-	font_size = 12.2,
+	font_size = 11.5,
 	font_rules = {
 		{
 			intensity = "Bold",
@@ -33,7 +34,24 @@ local config = {
 			mods = "CTRL",
 			action = wezterm.action.SendString("\x00\x54"),
 		},
+		{
+			key = "LeftArrow",
+			mods = "OPT",
+			action = wezterm.action.SendString("\x1bb"),
+		},
+		{
+			key = "RightArrow",
+			mods = "OPT",
+			action = wezterm.action.SendString("\x1bf"),
+		},
 	},
+	default_prog = { "/bin/zsh", "-l", "-c", "source ~/.zshrc; tmux new-session -A -s main" },
+	window_close_confirmation = "NeverPrompt",
 }
+
+wezterm.on("gui-startup", function(cmd)
+	local _, _, window = mux.spawn_window(cmd or {})
+	window:gui_window():maximize()
+end)
 
 return config
