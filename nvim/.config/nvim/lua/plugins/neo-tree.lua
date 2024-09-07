@@ -27,6 +27,7 @@ return {
           'node_modules',
           '.git',
           '.DS_Store',
+          '__pycache__',
         },
       },
     },

@@ -4,7 +4,7 @@ return {
     lazy = false,
     keys = {
       {
-        '<leader>f',
+        '<leader>fm',
         function()
           require('conform').format { async = true, lsp_fallback = true }
         end,
@@ -26,7 +26,7 @@ return {
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        python = { 'reorder_python_imports', 'ruff_format' },
+        python = { 'reorder-python-imports', 'ruff_format' },
         javascript = { 'prettierd', 'eslint' },
         typescript = { 'prettierd', 'eslint' },
         typescriptreact = { 'prettierd', 'eslint' },
