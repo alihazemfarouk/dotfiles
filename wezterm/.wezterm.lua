@@ -1,5 +1,4 @@
 local wezterm = require("wezterm")
-local mux = wezterm.mux
 
 local config = {
 	bidi_enabled = true,
@@ -48,10 +47,5 @@ local config = {
 	default_prog = { "/bin/zsh", "-l", "-c", "source ~/.zshrc; tmux new-session -A -s main" },
 	window_close_confirmation = "NeverPrompt",
 }
-
-wezterm.on("gui-startup", function(cmd)
-	local _, _, window = mux.spawn_window(cmd or {})
-	window:gui_window():maximize()
-end)
 
 return config

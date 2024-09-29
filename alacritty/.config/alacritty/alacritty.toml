@@ -4,7 +4,7 @@ import = ["/Users/alifarouk/.config/alacritty/themes/themes/catppuccin_mocha.tom
 TERM = "xterm-256color"
 
 [font]
-size = 12.2
+size = 12
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
@@ -40,8 +40,6 @@ decorations = "Buttonless"
 dynamic_padding = true
 option_as_alt = "Both"
 startup_mode = "Maximized"
-padding.x = 10
-padding.y = 10
 
 [shell]
 program = "/bin/zsh"
