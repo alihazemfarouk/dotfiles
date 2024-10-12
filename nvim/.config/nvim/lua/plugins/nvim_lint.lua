@@ -10,7 +10,6 @@ return {
         typescript = { 'eslint' },
         typescriptreact = { 'eslint' },
         javascriptreact = { 'eslint' },
-        go = { 'golangci_lint' },
         terraform = { 'tflint' },
         hcl = { 'tflint' },
         tf = { 'tflint' },
