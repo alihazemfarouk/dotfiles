@@ -33,6 +33,7 @@ return {
         hcl = { 'terragrunt_hclfmt' },
         tf = { 'terragrunt_hclfmt' },
         sql = { 'sqlfmt' },
+        markdown = { 'prettierd' },
       },
     },
   },
