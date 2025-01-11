@@ -3,30 +3,29 @@ return {
   lazy = false, -- lazy loading handled internally
 
   dependencies = 'rafamadriz/friendly-snippets',
-  version = 'v0.*',
+  version = '*',
 
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
   opts = {
-    highlight = {
+    appearance = {
       use_nvim_cmp_as_default = true,
+      nerd_font_variant = 'mono',
     },
-    nerd_font_variant = 'mono',
-
-    windows = {
+    completion = {
+      accept = { auto_brackets = { enabled = true } },
       documentation = {
-        min_width = 15,
-        max_width = 50,
-        max_height = 15,
-        border = vim.g.borderStyle,
         auto_show = true,
-        auto_show_delay_ms = 250,
+        update_delay_ms = 100,
+        window = {
+          min_width = 15,
+          max_width = 50,
+          max_height = 15,
+          border = vim.g.borderStyle,
+        },
       },
     },
-
-    accept = { auto_brackets = { enabled = true } },
-    trigger = { signature_help = { enabled = true } },
-
-    keymap = 'super-tab',
+    signature = { enabled = true },
+    keymap = { preset = 'super-tab' },
   },
 }
