@@ -2,11 +2,8 @@ return {
   {
     'vim-test/vim-test',
     event = 'BufRead',
-    dependencies = {
-      'preservim/vimux',
-    },
     config = function()
-      vim.g['test#strategy'] = 'vimux'
+      vim.g['test#strategy'] = 'neovim_sticky'
 
       local compose_exec = 'docker compose exec -u root api pytest'
       vim.g['test#python#runner'] = 'pytest'

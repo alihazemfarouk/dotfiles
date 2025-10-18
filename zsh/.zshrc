@@ -181,3 +181,4 @@ export EDITOR=nvim
 
 source ~/.thndrzshshortcuts.sh
 
+set -o vi

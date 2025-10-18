@@ -1,11 +1,12 @@
 font-size = "12"
-theme = "catppuccin-mocha"
+theme = "catppuccin-mocha.conf"
 macos-option-as-alt = true
 shell-integration-features = no-cursor
 cursor-style = "block"
 cursor-style-blink = false
 window-save-state = "always"
+maximize = true
 
 keybind = ctrl+m=text:\x00\x54
 
-command = /Users/thndr/.dotfiles/ghostty/.config/ghostty/startup-script.sh
+# command = /Users/thndr/.dotfiles/ghostty/.config/ghostty/startup-script.sh

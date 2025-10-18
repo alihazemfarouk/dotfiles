@@ -1,5 +1,19 @@
 local wezterm = require("wezterm")
 
+wezterm.on("gui-startup", function(cmd)
+	local active = wezterm.gui.screens().active
+
+	local _, _, window = wezterm.mux.spawn_window(cmd or {
+		x = active.x,
+		y = active.y,
+		width = active.width,
+		height = active.height,
+	})
+
+	window:gui_window():set_position(active.x, active.y)
+	window:gui_window():set_inner_size(active.width, active.height)
+end)
+
 local config = {
 	bidi_enabled = true,
 	font = wezterm.font("JetBrainsMono Nerd Font"),

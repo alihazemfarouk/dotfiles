@@ -3,6 +3,8 @@ vim.g.maplocalleader = ' '
 
 vim.g.have_nerd_font = true
 
+vim.g.loaded_python3_provider = 0
+
 -- [[ Setting options ]]
 require 'options'
 
@@ -17,3 +19,6 @@ require 'lazy-plugins'
 
 -- [[ Configure extra commands ]]
 require 'commands'
+
+-- [[ Configure LSP servers ]]
+require 'lsp'
