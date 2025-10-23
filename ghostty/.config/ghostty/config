@@ -6,7 +6,11 @@ cursor-style = "block"
 cursor-style-blink = false
 window-save-state = "always"
 maximize = true
+window-decoration = false
+gtk-titlebar = false
+confirm-close-surface = false
+quit-after-last-window-closed=true
 
 keybind = ctrl+m=text:\x00\x54
 
-# command = /Users/thndr/.dotfiles/ghostty/.config/ghostty/startup-script.sh
+command = /Users/thndr/.dotfiles/ghostty/.config/ghostty/startup-script.sh

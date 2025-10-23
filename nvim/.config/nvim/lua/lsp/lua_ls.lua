@@ -1,6 +1,6 @@
 vim.lsp.config('lua_ls', {
-  cmd = { 'lua-language-server' }, -- Command to start the Lua Language Server
-  filetypes = { 'lua' }, -- File types it should attach to
+  cmd = { 'lua-language-server' },
+  filetypes = { 'lua' },
   settings = {
     Lua = {
       workspace = {

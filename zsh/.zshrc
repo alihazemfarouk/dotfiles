@@ -8,7 +8,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 # fortune | cowsay -W 140 | lolcat
 # fortune | cowsay
 
-neofetch
+# neofetch
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -88,6 +88,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -149,15 +151,22 @@ alias ls="eza"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.Zsh 
 
 # NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+function load_nvm() {
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+}
 
 # rubyenv
 eval "$(rbenv init - zsh)"
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
+autoload -Uz compinit 
+if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
+  compinit;
+else
+  compinit -C;
+fi;
+
 
 # OpenSSL
 export LDFLAGS="-L$(brew --prefix openssl@1.1)/lib" 
@@ -181,4 +190,3 @@ export EDITOR=nvim
 
 source ~/.thndrzshshortcuts.sh
 
-set -o vi

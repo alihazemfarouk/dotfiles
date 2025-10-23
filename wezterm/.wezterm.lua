@@ -17,19 +17,7 @@ end)
 local config = {
 	bidi_enabled = true,
 	font = wezterm.font("JetBrainsMono Nerd Font"),
-	font_size = 11.5,
-	font_rules = {
-		{
-			intensity = "Bold",
-			italic = false,
-			font = wezterm.font("JetBrains Mono", { weight = "Bold", stretch = "Normal", style = "Normal" }),
-		},
-		{
-			intensity = "Bold",
-			italic = true,
-			font = wezterm.font("JetBrains Mono", { weight = "Bold", stretch = "Normal", style = "Italic" }),
-		},
-	},
+	font_size = 12,
 	hide_tab_bar_if_only_one_tab = true,
 	color_scheme = "Catppuccin Mocha",
 	window_decorations = "RESIZE",
@@ -39,7 +27,7 @@ local config = {
 		left = 8,
 		right = 8,
 		top = 8,
-		bottom = 8,
+		bottom = 0,
 	},
 	keys = {
 		{
@@ -58,7 +46,7 @@ local config = {
 			action = wezterm.action.SendString("\x1bf"),
 		},
 	},
-	default_prog = { "/bin/zsh", "-l", "-c", "source ~/.zshrc; tmux new-session -A -s main" },
+	default_prog = { "/bin/zsh", "-l", "-c", "source ~/.zshrc; exec tmux new-session -A -s main" },
 	window_close_confirmation = "NeverPrompt",
 }
 
