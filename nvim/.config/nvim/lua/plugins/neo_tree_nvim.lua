@@ -24,8 +24,14 @@ return {
       },
       content_layout = 'center',
     },
+    buffers = {
+      follow_current_file = {
+        enabled = true,
+      },
+    },
     filesystem = {
       use_libuv_file_watcher = true,
+      hijack_netrw_behavior = 'open_current',
       follow_current_file = {
         enabled = true,
       },

@@ -10,13 +10,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 # neofetch
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -24,7 +17,11 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME=""
+
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -88,8 +85,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -147,9 +142,6 @@ alias lzd="lazydocker"
 alias cat="bat"
 alias ls="eza"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.Zsh 
-
 # NVM
 function load_nvm() {
   export NVM_DIR="$HOME/.nvm"
@@ -159,14 +151,6 @@ function load_nvm() {
 
 # rubyenv
 eval "$(rbenv init - zsh)"
-
-autoload -Uz compinit 
-if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
-  compinit;
-else
-  compinit -C;
-fi;
-
 
 # OpenSSL
 export LDFLAGS="-L$(brew --prefix openssl@1.1)/lib" 
@@ -182,11 +166,8 @@ eval "$(zoxide init zsh)"
 # set k9s editor to vim
 export EDITOR=nvim
 
-# Starship prompt
-# eval "$(starship init zsh)"
-
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 source ~/.thndrzshshortcuts.sh
 
+# Starship prompt
+autoload -U promptinit; promptinit
+prompt pure

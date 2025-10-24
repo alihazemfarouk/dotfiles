@@ -2,6 +2,7 @@ font-size = "12"
 theme = "catppuccin-mocha.conf"
 macos-option-as-alt = true
 shell-integration-features = no-cursor
+shell-integration = zsh
 cursor-style = "block"
 cursor-style-blink = false
 window-save-state = "always"
@@ -13,4 +14,4 @@ quit-after-last-window-closed=true
 
 keybind = ctrl+m=text:\x00\x54
 
-command = /Users/thndr/.dotfiles/ghostty/.config/ghostty/startup-script.sh
+command = /opt/homebrew/bin/zsh -c "tmux attach -t \"$(tmux ls -F '#{session_name}' 2>/dev/null | head -n 1)\" 2>/dev/null || tmux new -s main"
