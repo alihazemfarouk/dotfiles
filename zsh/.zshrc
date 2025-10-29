@@ -20,8 +20,6 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME=""
 
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -89,8 +87,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#555555'
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_STRATEGY=(history)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -151,10 +148,6 @@ function load_nvm() {
 
 # rubyenv
 eval "$(rbenv init - zsh)"
-
-# OpenSSL
-export LDFLAGS="-L$(brew --prefix openssl@1.1)/lib" 
-export CFLAGS="-I$(brew --prefix openssl@1.1)/include"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"

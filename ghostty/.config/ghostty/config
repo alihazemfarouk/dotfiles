@@ -1,5 +1,5 @@
 font-size = "12"
-theme = "catppuccin-mocha.conf"
+theme = one half dark
 macos-option-as-alt = true
 shell-integration-features = no-cursor
 shell-integration = zsh

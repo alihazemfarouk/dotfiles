@@ -10,10 +10,18 @@ return {
   },
   {
     'catppuccin/nvim',
+    enabled = false,
     name = 'catppuccin',
     priority = 1000,
     init = function()
       vim.cmd.colorscheme 'catppuccin'
+    end,
+  },
+  {
+    'olimorris/onedarkpro.nvim',
+    priority = 1000,
+    init = function()
+      vim.cmd.colorscheme 'onedark'
     end,
   },
 }
