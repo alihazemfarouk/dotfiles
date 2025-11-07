@@ -73,7 +73,7 @@ vim.lsp.inlay_hint.enable(true)
 
 require 'lsp.lua_ls'
 require 'lsp.pyright'
-require 'lsp.tsgo'
+require 'lsp.ts_ls'
 require 'lsp.gopls'
 require 'lsp.cssls'
 require 'lsp.html'
