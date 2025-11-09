@@ -13,6 +13,7 @@ return {
         terraform = { 'tflint' },
         hcl = { 'tflint' },
         tf = { 'tflint' },
+        go = { 'golangcilint' },
       }
 
       -- Create autocommand which carries out the actual linting

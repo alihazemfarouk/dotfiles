@@ -1,6 +1,19 @@
 return {
   {
     'stevearc/conform.nvim',
+    event = { 'BufReadPre' },
+    cmd = { 'ConformInfo' },
+    keys = {
+      {
+        -- Customize or remove this keymap to your liking
+        '<leader>f',
+        function()
+          require('conform').format { async = true }
+        end,
+        mode = '',
+        desc = 'Format buffer',
+      },
+    },
     opts = {
       format_on_save = {
         lsp_format = 'fallback',
